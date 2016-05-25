@@ -45,3 +45,23 @@ allVolunteers.toString;
 alert("Your victims are" + " " + allVictims + " " + "and your volunteers are" + " " + allVolunteers);
 
 
+//Bonus 2
+var personInNeed = prompt("Please enter the name of a person in need.");
+
+for (var i = 0; i < allVictims.length; i ++) {
+    console.log(allVictims[i]);
+    if (personInNeed === allVictims[i][0]) {
+        var personInNeedStreet = allVictims[i][2];
+    }
+}
+
+for (var j = 0; j < allVolunteers.length; j ++) {
+    console.log(allVolunteers[j]);
+    if (allVolunteers[j][2] === personInNeedStreet) {
+        alert(allVolunteers[j][0]);
+    }
+    else {
+        alert("No volunteer was found.");
+    }
+}
+
